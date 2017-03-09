@@ -1,0 +1,39 @@
+page-home {
+  .background {
+    background-color: #f4f4f4;
+  }
+  #feed {
+    background-color: #2a373d;
+    width: 100%;
+    height: 170px;
+    text-align: center;
+  }
+  #feed > img {
+    height: 60%;
+  }
+  #feed > h5 {
+    margin-bottom: 0px;
+    color: white;
+  }
+  #feed > p {
+    margin-top: 0px;
+    color: #5a6e77;
+  }
+  .menu-buttons {
+    font-size: 12px;
+    text-align: center;
+  }
+  .border-bottom-right, .border-bottom, .border-right {
+    border-style:solid;
+    border-color: #f4f4f4;
+  }
+  .border-bottom-right {
+    border-width: 0px 3px 3px 0px;
+  }
+  .border-right {
+    border-width: 0px 3px 0px 0px;
+  }
+  .border-bottom {
+    border-width: 0px 0px 3px 0px;
+  }
+}
