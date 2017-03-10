@@ -3,13 +3,13 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ModalNis } from '../pages/modal-nis/modal-nis';
-import { SideMenuComponent } from '../components/menu/menu.component';
+import { SideMenu } from '../pages/menu/menu';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    SideMenuComponent,
+    SideMenu,
     ModalNis
   ],
   imports: [
@@ -19,7 +19,7 @@ import { SideMenuComponent } from '../components/menu/menu.component';
   entryComponents: [
     MyApp,
     HomePage,
-    SideMenuComponent,
+    SideMenu,
     ModalNis
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

@@ -2,11 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav } from 'ionic-angular';
 
 @Component({
-  selector: 'side-menu-component',
+  selector: 'side-menu',
   templateUrl: 'menu.html'
 })
 
-export class SideMenuComponent {
+export class SideMenu {
   @ViewChild(Nav) nav: Nav;
   private nome: string;
   private nis: string;
