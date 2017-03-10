@@ -6,14 +6,14 @@
     a sua experiência no aplicativo Bolsa Família e ganhar acesso a novas funcionalidades</p>
     <ion-item padding-right>
       <ion-label stacked>Número do NIS</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="nis"></ion-input>
     </ion-item>
     <ion-row>
       <ion-col width-50>
         <button ion-button color="md_black_1000" clear>Mais tarde</button>
       </ion-col>
       <ion-col width-50>
-        <button padding-left ion-button clear>Confirmar</button>
+        <button padding-left ion-button clear (click)="dismiss(nis)">Confirmar</button>
       </ion-col>
     </ion-row>
   </div>

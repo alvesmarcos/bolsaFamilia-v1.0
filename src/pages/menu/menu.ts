@@ -8,11 +8,6 @@ import { Nav } from 'ionic-angular';
 
 export class SideMenu {
   @ViewChild(Nav) nav: Nav;
-  private nome: string;
-  private nis: string;
-
-  constructor(){
-    this.nome = "Maria dos Santos Silva";
-    this.nis = "NIS 9";
-  }
+  public nome: string = "Maria dos Santos Silva";
+  public nis: number = 9;
 }
