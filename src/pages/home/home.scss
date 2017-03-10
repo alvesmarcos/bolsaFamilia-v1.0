@@ -1,9 +1,10 @@
 page-home {
   .background {
-    background-color: #f4f4f4;
+    background-color: color($colors, light);
   }
   #feed {
-    background-image: url("../../assets/image/backgroundsemlogin.png");
+    background-image: url("../assets/image/backgroundsemlogin.png");
+    background-size: 100% 100%;
     width: 100%;
     height: 170px;
     text-align: center;
@@ -22,10 +23,13 @@ page-home {
   ion-col {
     text-align: center;
   }
-  ion-col > p {
-    padding-top: 5px;
-    font-size: 10px;
-    color: #ffffff;
+  //
+  // ion-col > p não é possível alterar a cor e a fonte
+  //
+  .text-button {
+    padding-top: 10px;
+    color: color($colors, md_gray_600);
+    font-size: 11px;
   }
   ion-col > img {
     width: 45px;
@@ -34,7 +38,7 @@ page-home {
   }
   .border-bottom-right, .border-bottom, .border-right {
     border-style:solid;
-    border-color: #f4f4f4;
+    border-color: color($colors, light);
   }
   .border-bottom-right {
     border-width: 0px 2px 2px 0px;
