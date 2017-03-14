@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { ModalNis }  from '../modal-nis/modal-nis';
 import { InteratividadePage } from '../interatividade/interatividade';
+import { CalendarioPage } from '../calendario/calendario';
 
 @Component({
   selector: 'page-home',
@@ -23,8 +24,10 @@ export class HomePage {
     modal.present();
   }
 
+  pushCalendario() {
+    this.navCtrl.push(CalendarioPage);
+  }
   pushInteratividade() {
     this.navCtrl.push(InteratividadePage);
   }
-
 }
