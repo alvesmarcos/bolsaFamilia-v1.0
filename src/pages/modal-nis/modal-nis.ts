@@ -8,7 +8,7 @@ import { NavParams, ViewController } from 'ionic-angular';
 })
 
 export class ModalNis {
-  constructor(public viewCtrl: ViewController){ }
+  constructor(private viewCtrl: ViewController) { }
 
   dismiss(data) {
    this.viewCtrl.dismiss(data);

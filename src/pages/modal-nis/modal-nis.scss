@@ -11,9 +11,6 @@ modal-nis {
   p {
     font-size: 11px;
   }
-  #background {
-    background: rgba(0,0,0,0.5);
-  }
   #button-left {
     float: left;
   }
@@ -26,5 +23,8 @@ modal-nis {
     background-color: white;
     margin: 80px auto 0; ;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  }
+  .background {
+    background: rgba(0,0,0,0.5);
   }
 }
