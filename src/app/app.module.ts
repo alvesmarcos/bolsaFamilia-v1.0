@@ -6,6 +6,7 @@ import { ModalNis } from '../pages/modal-nis/modal-nis';
 import { SideMenu } from '../pages/menu/menu';
 import { InteratividadePage } from '../pages/interatividade/interatividade';
 import { CalendarioPage } from '../pages/calendario/calendario';
+import { AtendimentoPage } from '../pages/atendimento/atendimento';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CalendarioPage } from '../pages/calendario/calendario';
     SideMenu,
     ModalNis,
     InteratividadePage,
-    CalendarioPage
+    CalendarioPage,
+    AtendimentoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,7 +29,8 @@ import { CalendarioPage } from '../pages/calendario/calendario';
     SideMenu,
     ModalNis,
     InteratividadePage,
-    CalendarioPage
+    CalendarioPage,
+    AtendimentoPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

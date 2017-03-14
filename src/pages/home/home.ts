@@ -4,6 +4,7 @@ import { NavController, ModalController } from 'ionic-angular';
 import { ModalNis }  from '../modal-nis/modal-nis';
 import { InteratividadePage } from '../interatividade/interatividade';
 import { CalendarioPage } from '../calendario/calendario';
+import { AtendimentoPage } from '../atendimento/atendimento';
 
 @Component({
   selector: 'page-home',
@@ -23,7 +24,9 @@ export class HomePage {
     });
     modal.present();
   }
-
+  pushAtendimento() {
+    this.navCtrl.push(AtendimentoPage);
+  }
   pushCalendario() {
     this.navCtrl.push(CalendarioPage);
   }
