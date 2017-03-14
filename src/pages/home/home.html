@@ -13,7 +13,7 @@
 </ion-header>
 
 <ion-content class="background" onscroll="true">
-  <div id="feed" padding (click)="inputNis()">
+  <div id="dynamic" padding (click)="inputNis()">
     <img src="assets/image/designmain.png" alt="circle">
     <h5>VEJA MAIS OPÇÕES</h5>
     <p>Toque para inserir seu NIS</p>
@@ -40,7 +40,7 @@
             <img src="assets/icon/outrosprogramas.png">
             <p class="text-button">Outros Programas</p>
           </ion-col>
-          <ion-col padding-top width-33 class="border-bottom-right">
+          <ion-col padding-top width-33 class="border-bottom-right" (click)="pushInteratividade()">
             <img src="assets/icon/qrcode.png">
             <p class="text-button">Canal de Interatividade</p>
           </ion-col>

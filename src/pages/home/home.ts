@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController, ModalController } from 'ionic-angular';
 import { ModalNis }  from '../modal-nis/modal-nis';
+import { InteratividadePage } from '../interatividade/interatividade';
 
 @Component({
   selector: 'page-home',
@@ -10,9 +11,7 @@ import { ModalNis }  from '../modal-nis/modal-nis';
 export class HomePage {
   isValid: boolean = true;
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
-
-  }
+  constructor(private navCtrl: NavController, private modalCtrl: ModalController) { }
 
   inputNis(){
     let modal = this.modalCtrl.create(ModalNis);
@@ -23,4 +22,9 @@ export class HomePage {
     });
     modal.present();
   }
+
+  pushInteratividade() {
+    this.navCtrl.push(InteratividadePage);
+  }
+
 }
