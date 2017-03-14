@@ -1,13 +1,13 @@
 side-menu {
-  #header {
-    background-image: url("../assets/image/backgroundlateral.png");
-    background-size: 100% 100%;
-    height: 115px;
+  ion-content {
+    margin-top: 115px;
   }
   ion-label {
     font-size: 16px;
   }
-  ion-content {
-    margin-top: 115px;
+  #header {
+    background-image: url("../assets/image/backgroundlateral.png");
+    background-size: 100% 100%;
+    height: 115px;
   }
 }

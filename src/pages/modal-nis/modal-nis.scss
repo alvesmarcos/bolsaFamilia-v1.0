@@ -1,14 +1,4 @@
 modal-nis {
-  #background {
-    background: rgba(0,0,0,0.5);
-  }
-  #content {
-    height: 360px;
-    width: 279px;
-    background-color: white;
-    margin: 80px auto 0; ;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-  }
   img {
     width: 279px;
     height: 150px;
@@ -21,10 +11,20 @@ modal-nis {
   p {
     font-size: 11px;
   }
+  #background {
+    background: rgba(0,0,0,0.5);
+  }
   #button-left {
     float: left;
   }
   #button-right {
     padding-left: 14px;
+  }
+  #content {
+    height: 360px;
+    width: 279px;
+    background-color: white;
+    margin: 80px auto 0; ;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
   }
 }
