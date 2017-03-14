@@ -5,6 +5,7 @@ import { ModalNis }  from '../modal-nis/modal-nis';
 import { InteratividadePage } from '../interatividade/interatividade';
 import { CalendarioPage } from '../calendario/calendario';
 import { AtendimentoPage } from '../atendimento/atendimento';
+import { SobrePage } from '../sobre/sobre';
 
 @Component({
   selector: 'page-home',
@@ -32,5 +33,8 @@ export class HomePage {
   }
   pushInteratividade() {
     this.navCtrl.push(InteratividadePage);
+  }
+  pushSobre(){
+    this.navCtrl.push(SobrePage);
   }
 }

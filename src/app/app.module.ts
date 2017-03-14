@@ -7,7 +7,7 @@ import { SideMenu } from '../pages/menu/menu';
 import { InteratividadePage } from '../pages/interatividade/interatividade';
 import { CalendarioPage } from '../pages/calendario/calendario';
 import { AtendimentoPage } from '../pages/atendimento/atendimento';
-
+import { SobrePage } from '../pages/sobre/sobre';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { AtendimentoPage } from '../pages/atendimento/atendimento';
     ModalNis,
     InteratividadePage,
     CalendarioPage,
-    AtendimentoPage
+    AtendimentoPage,
+    SobrePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,7 +31,8 @@ import { AtendimentoPage } from '../pages/atendimento/atendimento';
     ModalNis,
     InteratividadePage,
     CalendarioPage,
-    AtendimentoPage
+    AtendimentoPage,
+    SobrePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
