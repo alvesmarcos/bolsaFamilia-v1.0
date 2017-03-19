@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController, ModalController } from 'ionic-angular';
+import { AuthService } from '../../providers/auth.service';
 import { ModalNis }  from '../modal-nis/modal-nis';
 import { InteratividadePage } from '../interatividade/interatividade';
 import { CalendarioPage } from '../calendario/calendario';
@@ -12,29 +13,28 @@ import { SobrePage } from '../sobre/sobre';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  isValid: boolean = true;
+  isValid: boolean = false;
 
-  constructor(private navCtrl: NavController, private modalCtrl: ModalController) { }
+  constructor(private _navCtrl: NavController, private _modalCtrl: ModalController,
+              private _authService: AuthService) { }
 
   inputNis(){
-    let modal = this.modalCtrl.create(ModalNis);
+    let modal = this._modalCtrl.create(ModalNis);
     modal.onDidDismiss(data => {
-      if(data==null)
-        this.isValid = true;
-      alert(data);
+      this.isValid = this._authService.validate(data);
     });
     modal.present();
   }
   pushAtendimento() {
-    this.navCtrl.push(AtendimentoPage);
+    this._navCtrl.push(AtendimentoPage);
   }
   pushCalendario() {
-    this.navCtrl.push(CalendarioPage);
+    this._navCtrl.push(CalendarioPage);
   }
   pushInteratividade() {
-    this.navCtrl.push(InteratividadePage);
+    this._navCtrl.push(InteratividadePage);
   }
   pushSobre(){
-    this.navCtrl.push(SobrePage);
+    this._navCtrl.push(SobrePage);
   }
 }

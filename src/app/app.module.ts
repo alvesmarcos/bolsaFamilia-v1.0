@@ -8,6 +8,7 @@ import { InteratividadePage } from '../pages/interatividade/interatividade';
 import { CalendarioPage } from '../pages/calendario/calendario';
 import { AtendimentoPage } from '../pages/atendimento/atendimento';
 import { SobrePage } from '../pages/sobre/sobre';
+import { AuthService } from '../providers/auth.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,6 @@ import { SobrePage } from '../pages/sobre/sobre';
     AtendimentoPage,
     SobrePage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService]
 })
 export class AppModule {}

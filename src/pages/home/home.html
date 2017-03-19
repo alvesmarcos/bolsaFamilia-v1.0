@@ -13,12 +13,12 @@
 </ion-header>
 
 <ion-content class="background" onscroll="true">
-  <div id="not-logged" padding (click)="inputNis()">
+  <div *ngIf="!isValid" id="not-logged" padding (click)="inputNis()">
     <img src="assets/image/designmain.png" alt="circle">
     <h5>VEJA MAIS OPÇÕES</h5>
     <p>Toque para inserir seu NIS</p>
   </div>
-  <!-- <div id="logged" padding-top (click)="inputNis()">
+  <div *ngIf="isValid" id="logged" padding-top>
     <p>Próximo Pagamento</p>
     <h1>{{'26 de janeiro'}}</h1>
     <ion-toolbar color="primary">
@@ -40,7 +40,7 @@
         </ion-col>
       </ion-row>
     </ion-toolbar>
-  </div> -->
+  </div>
   <ion-card>
     <ion-card-content>
       <ion-grid>

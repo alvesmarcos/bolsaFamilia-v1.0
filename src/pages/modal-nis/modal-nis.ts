@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavParams, ViewController } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'modal-nis',
@@ -8,9 +8,9 @@ import { NavParams, ViewController } from 'ionic-angular';
 })
 
 export class ModalNis {
-  constructor(private viewCtrl: ViewController) { }
+  constructor(private _viewCtrl: ViewController) { }
 
   dismiss(data) {
-   this.viewCtrl.dismiss(data);
+   this._viewCtrl.dismiss(data);
   }
 }

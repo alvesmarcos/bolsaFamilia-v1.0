@@ -7,5 +7,5 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'calendario.html'
 })
 export class CalendarioPage {
-  constructor(private navCtrl: NavController) { }
+  constructor(private _navCtrl: NavController) { }
 }

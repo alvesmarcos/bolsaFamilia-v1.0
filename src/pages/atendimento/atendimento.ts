@@ -7,5 +7,5 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'atendimento.html'
 })
 export class AtendimentoPage {
-  constructor(private navCtrl: NavController) { }
+  constructor(private _navCtrl: NavController) { }
 }

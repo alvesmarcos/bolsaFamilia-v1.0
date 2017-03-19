@@ -8,5 +8,5 @@ import { NavController } from 'ionic-angular';
 })
 
 export class SobrePage {
-  constructor(private navCtrl: NavController){ }
+  constructor(private _navCtrl: NavController){ }
 }

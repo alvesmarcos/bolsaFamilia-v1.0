@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav } from 'ionic-angular';
+import { AuthService } from '../../providers/auth.service';
 
 @Component({
   selector: 'side-menu',
@@ -8,6 +9,6 @@ import { Nav } from 'ionic-angular';
 
 export class SideMenu {
   @ViewChild(Nav) nav: Nav;
-  public nome: string = "Maria dos Santos Silva";
-  public nis: number = 9;
+  
+  constructor(private _authService: AuthService){ }
 }
