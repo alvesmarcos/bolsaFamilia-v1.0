@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-calendario',
   templateUrl: 'calendario.html'
 })
 export class CalendarioPage {
-  constructor(private _navCtrl: NavController) { }
+  flag: boolean;
+  constructor(private _navCtrl: NavController, private _navParams: NavParams) {
+    this.flag = _navParams.get('flag');
+  }
 }

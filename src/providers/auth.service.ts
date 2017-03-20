@@ -5,6 +5,9 @@ export class AuthService {
   private _nome: string;
   private _nis: string;
 
+  constructor(){
+    this._nome = 'Menu';
+  }
   validate(nis:string){
     if(nis=='01234567891'){
       this._nome = 'Marcos Alves da Silva';

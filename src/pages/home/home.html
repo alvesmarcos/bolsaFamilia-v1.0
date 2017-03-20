@@ -18,12 +18,12 @@
     <h5>VEJA MAIS OPÇÕES</h5>
     <p>Toque para inserir seu NIS</p>
   </div>
-  <div *ngIf="isValid" id="logged" padding-top>
+  <div *ngIf="isValid" id="logged" padding-top (click)="pushCalendario(false)">
     <p>Próximo Pagamento</p>
     <h1>{{'26 de janeiro'}}</h1>
     <ion-toolbar color="primary">
       <ion-row>
-        <ion-col width-45>
+        <ion-col width-45 (click)="pushMensagens()">
           <div class="box-content">
             <img src="assets/icon/mensagens.png" alt="circle">
             <ion-label>NOVAS MENSAGENS</ion-label>
@@ -31,7 +31,7 @@
           </div>
         </ion-col>
         <div class="border-right"></div>
-        <ion-col width-45>
+        <ion-col width-45 (click)="pushExtrato()">
           <div class="box-content">
             <img src="assets/icon/parcelas.png" alt="circle">
             <ion-label>PARCELAS {{2017}}</ion-label>
@@ -45,7 +45,7 @@
     <ion-card-content>
       <ion-grid>
         <ion-row>
-          <ion-col width-33 class="border-bottom-right"  (click)="pushCalendario()">
+          <ion-col width-33 class="border-bottom-right"  (click)="pushCalendario(true)">
             <img src="assets/icon/calendario.png">
             <p class="text-button">Calendário de Pagamento</p>
           </ion-col>
@@ -59,7 +59,7 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col padding-top width-33 class="border-bottom-right">
+          <ion-col padding-top width-33 class="border-bottom-right" (click)="pushOutrosProgramas()">
             <img src="assets/icon/outrosprogramas.png">
             <p class="text-button">Outros Programas</p>
           </ion-col>

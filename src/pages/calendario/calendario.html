@@ -6,9 +6,18 @@
 
 <ion-content>
   <div id="info" padding>
-    <img src="assets/icon/calendario.png" alt="Icone calendário">
-    <p>Digite o último número do seu NIS</p>
-    <button ion-button color="light">Acessar</button>
+    <!-- <img src="assets/icon/calendario.png" alt="Icone calendário"> -->
+    <div *ngIf="flag">
+      <p>Digite o último número do NIS</p>
+      <ion-item no-lines>
+        <ion-label>NIS</ion-label>
+        <ion-input type="tel" [(ngModel)]="nis"></ion-input>
+      </ion-item>
+    </div>
+    <div class="next-pay" *ngIf="!flag">
+      <p>Próximo Pagamento</p>
+      <h1>{{'26 de janeiro'}}</h1>
+    </div>
   </div>
   <ion-card>
     <ion-card-header color="md_gray_600">Próximas datas de pagamento</ion-card-header>

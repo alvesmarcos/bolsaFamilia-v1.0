@@ -8,6 +8,9 @@ import { InteratividadePage } from '../pages/interatividade/interatividade';
 import { CalendarioPage } from '../pages/calendario/calendario';
 import { AtendimentoPage } from '../pages/atendimento/atendimento';
 import { SobrePage } from '../pages/sobre/sobre';
+import { OutrosProgramasPage } from '../pages/outros-programas/outros-programas';
+import { MensagensPage } from '../pages/mensagens/mensagens';
+import { ExtratoPage } from '../pages/extrato/extrato';
 import { AuthService } from '../providers/auth.service';
 
 @NgModule({
@@ -19,7 +22,10 @@ import { AuthService } from '../providers/auth.service';
     InteratividadePage,
     CalendarioPage,
     AtendimentoPage,
-    SobrePage
+    SobrePage,
+    OutrosProgramasPage,
+    MensagensPage,
+    ExtratoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -33,7 +39,10 @@ import { AuthService } from '../providers/auth.service';
     InteratividadePage,
     CalendarioPage,
     AtendimentoPage,
-    SobrePage
+    SobrePage,
+    OutrosProgramasPage,
+    MensagensPage,
+    ExtratoPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService]
 })
