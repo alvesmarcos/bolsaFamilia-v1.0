@@ -18,9 +18,11 @@
     <h5>VEJA MAIS OPÇÕES</h5>
     <p>Toque para inserir seu NIS</p>
   </div>
-  <div *ngIf="isValid" id="logged" padding-top (click)="pushCalendario(false)">
-    <p>Próximo Pagamento</p>
-    <h1>{{'26 de janeiro'}}</h1>
+  <div *ngIf="isValid" id="logged" padding-top>
+    <div (click)="pushCalendario(false)">
+      <p>Próximo Pagamento</p>
+      <h1>{{'26 de janeiro'}}</h1>
+    </div>
     <ion-toolbar color="primary">
       <ion-row>
         <ion-col width-45 (click)="pushMensagens()">
