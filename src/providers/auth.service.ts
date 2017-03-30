@@ -8,7 +8,9 @@ export class AuthService {
   constructor(){
     this._nome = 'Menu';
   }
-  validate(nis:string){
+
+  // OBS: Implementação provisória
+  public validate(nis:string): boolean {
     if(nis=='01234567891'){
       this._nome = 'Marcos Alves da Silva';
       this._nis = nis;
@@ -17,10 +19,12 @@ export class AuthService {
       return false;
     }
   }
-  getNome(){
+
+  public get nome(): string {
     return this._nome;
   }
-  getNis(){
+
+  public get nis(): string {
     return this._nis;
   }
 }

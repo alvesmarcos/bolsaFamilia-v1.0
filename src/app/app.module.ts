@@ -1,6 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+
 import { MyApp } from './app.component';
+
 import { HomePage } from '../pages/home/home';
 import { ModalNis } from '../pages/modal-nis/modal-nis';
 import { SideMenu } from '../pages/menu/menu';
@@ -11,7 +13,9 @@ import { SobrePage } from '../pages/sobre/sobre';
 import { OutrosProgramasPage } from '../pages/outros-programas/outros-programas';
 import { MensagensPage } from '../pages/mensagens/mensagens';
 import { ExtratoPage } from '../pages/extrato/extrato';
+
 import { AuthService } from '../providers/auth.service';
+import { CalendarService } from '../providers/calendar.service';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,6 @@ import { AuthService } from '../providers/auth.service';
     MensagensPage,
     ExtratoPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService, CalendarService]
 })
 export class AppModule {}

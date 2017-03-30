@@ -7,7 +7,7 @@
 <ion-content>
   <div id="info" padding>
     <!-- <img src="assets/icon/calendario.png" alt="Icone calendário"> -->
-    <div *ngIf="flag">
+    <div *ngIf="_digit==-1">
       <p>Digite o último número do NIS</p>
       <ion-item no-lines>
         <ion-label>NIS</ion-label>
@@ -17,7 +17,7 @@
         <button ion-button color="secondary" small>Acessar</button>
       </div>
     </div>
-    <div class="next-pay" *ngIf="!flag">
+    <div class="next-pay" *ngIf="_digit!=-1">
       <p>Próximo Pagamento</p>
       <h1>{{'26 de janeiro'}}</h1>
     </div>

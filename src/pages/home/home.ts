@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { NavController, ModalController, ToastController } from 'ionic-angular';
 
-import { AuthService } from '../../providers/auth.service';
 import { ModalNis }  from '../modal-nis/modal-nis';
 import { InteratividadePage } from '../interatividade/interatividade';
 import { CalendarioPage } from '../calendario/calendario';
@@ -12,25 +11,27 @@ import { OutrosProgramasPage } from '../outros-programas/outros-programas';
 import { MensagensPage } from '../mensagens/mensagens';
 import { ExtratoPage } from '../extrato/extrato';
 
+import { AuthService } from '../../providers/auth.service';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  isValid: boolean = false;
+  private _isValid: boolean = false;
 
   constructor(private _navCtrl: NavController, private _modalCtrl: ModalController,
-              private _authService: AuthService, private _toastCtrl: ToastController) { }
+              private _toastCtrl: ToastController, private _authService: AuthService) { }
 
-  inputNis(){
+  public inputNis(): void {
     let modal = this._modalCtrl.create(ModalNis);
     modal.onDidDismiss(data => {
-      this.isValid = this._authService.validate(data);
+      this._isValid = this._authService.validate(data);
     });
     modal.present();
   }
 
-  presentToast(){
+  public presentToast(): void {
     let toast = this._toastCtrl.create({
       message: 'Para acessar essa opção insira seu NIS',
       duration: 3000,
@@ -39,28 +40,38 @@ export class HomePage {
     toast.present();
   }
 
-  pushAtendimento() {
+  public pushAtendimento(): void {
     this._navCtrl.push(AtendimentoPage);
   }
-  pushCalendario(bool) {
-    this._navCtrl.push(CalendarioPage, {flag: bool});
+
+  public pushCalendario(value): void {
+    this._navCtrl.push(CalendarioPage, {digit: value});
   }
-  pushInteratividade() {
+
+  public pushInteratividade(): void {
     if(this.isValid)
       this._navCtrl.push(InteratividadePage);
     else
       this.presentToast();
   }
-  pushSobre(){
+
+  public pushSobre(): void {
     this._navCtrl.push(SobrePage);
   }
-  pushOutrosProgramas(){
+
+  public pushOutrosProgramas(): void {
     this._navCtrl.push(OutrosProgramasPage);
   }
-  pushMensagens(){
+
+  public pushMensagens(): void {
     this._navCtrl.push(MensagensPage);
   }
-  pushExtrato(){
+
+  public pushExtrato(): void {
     this._navCtrl.push(ExtratoPage);
+  }
+
+  public get isValid(): boolean {
+    return this._isValid;
   }
 }
