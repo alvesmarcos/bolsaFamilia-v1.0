@@ -16,6 +16,11 @@ page-calendario {
   ion-card-header {
     text-align: center;
   }
+  .box-date {
+    ion-icon {
+      padding-bottom: 6px;
+    }
+  }
   .next-pay {
     h1 {
       margin-top: 0px;

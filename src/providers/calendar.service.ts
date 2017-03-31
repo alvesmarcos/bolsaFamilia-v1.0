@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CalendarService {
-  private _hashDate: Map<number, string[]> = new Map();
+  private _hashDate: Map<number, string[]>;
 
   constructor(){
+    this._hashDate = new Map();
     this.loadPayCalendar();
   }
 
