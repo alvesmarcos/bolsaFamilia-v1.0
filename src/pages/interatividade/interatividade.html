@@ -6,13 +6,16 @@
 
 <ion-content class="background">
   <div id="info" padding>
-    <!-- <p>Canal de interação com aplicativo de programa Bolsa Família da TV Digital</p>
-    <img src="assets/icon/qrcode.png" alt="Icone interatividade"> -->
+    <p>Canal de interação com aplicativo de programa Bolsa Família da TV Digital</p>
+    <button ion-button large full color="secondary" (click)="qrCodeDecode()">
+      <ion-icon name="qr-scanner" padding-right></ion-icon>
+      Scan
+    </button>
   </div>
   <ion-card>
-    <ion-card-header color="md_gray_600">Aproxime do QR code</ion-card-header>
+    <ion-card-header color="md_gray_600">Conteúdo da Mensagem</ion-card-header>
     <ion-card-content>
-      <!-- empty -->
+      {{_content}}
     </ion-card-content>
   </ion-card>
 </ion-content>
