@@ -6,20 +6,20 @@
     <ion-title>Bolsa Família</ion-title>
     <ion-buttons end>
       <button ion-button>
-        <ion-icon name="more" md="md-more"></ion-icon>
+        <ion-icon name="more"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="background" onscroll="true">
-  <div *ngIf="!isValid" id="not-logged" padding (click)="inputNis()">
+  <div *ngIf="!isValid" id="default-content" padding (click)="inputNis()">
     <img src="assets/image/designmain.png" alt="circle">
     <h5>VEJA MAIS OPÇÕES</h5>
     <p>Toque para inserir seu NIS</p>
   </div>
-  <div *ngIf="isValid" id="logged" padding-top>
-    <div (click)="pushCalendario(_authService.nis.charAt(10))">
+  <div *ngIf="isValid" id="custom-content" padding-top>
+    <div padding-top (click)="pushCalendario(_authService.nis.charAt(10))">
       <p>Próximo Pagamento</p>
       <h1>{{'26 de janeiro'}}</h1>
     </div>
@@ -51,36 +51,28 @@
             <img src="assets/icon/calendario.png">
             <p class="text-button">Calendário de Pagamento</p>
           </ion-col>
-          <ion-col width-33 class="border-bottom-right">
-            <img src="assets/icon/calculadora.png">
-            <p class="text-button">Calculadora de Rendimento</p>
-          </ion-col>
-          <ion-col width-33 class="border-bottom" (click)="pushAtendimento()">
+          <ion-col width-33 class="border-bottom-right" (click)="pushAtendimento()">
             <img src="assets/icon/atendimento.png">
             <p class="text-button">Pontos de Atendimento</p>
           </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col padding-top width-33 class="border-bottom-right" (click)="pushOutrosProgramas()">
-            <img src="assets/icon/outrosprogramas.png">
-            <p class="text-button">Outros Programas</p>
-          </ion-col>
-          <ion-col padding-top width-33 class="border-bottom-right" (click)="pushInteratividade()">
-            <img src="assets/icon/qrcode.png">
-            <p class="text-button">Canal de Interatividade</p>
-          </ion-col>
-          <ion-col padding-top  width-33 class="border-bottom" (click)="pushSobre()">
+          <ion-col width-33 class="border-bottom" (click)="pushSobre()">
             <img src="assets/icon/sobre.png">
             <p class="text-button">Sobre o Bolsa Família</p>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col width-33 class="border-right"></ion-col>
-          <ion-col padding-top width-33 class="border-right">
-            <img src="assets/icon/redes.png">
-            <p class="text-button">Redes Sociais do MDSA</p>
+          <ion-col padding-top width-33 class="border-right" (click)="pushOutrosProgramas()">
+            <img src="assets/icon/outrosprogramas.png">
+            <p class="text-button">Outros Programas</p>
           </ion-col>
-          <ion-col width-33></ion-col>
+          <ion-col padding-top width-33 class="border-right" (click)="pushInteratividade()">
+            <img src="assets/icon/qrcode.png">
+            <p class="text-button">Canal de Interatividade</p>
+          </ion-col>
+          <ion-col padding-top width-33>
+            <img src="assets/icon/redes.png">
+            <p class="text-button">Redes Sociais</p>
+          </ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-content>
