@@ -2,6 +2,6 @@
 
 Proposta de aplicação móvel híbrida para o Bolsa Família MDSA
 
-# Tecnologias
+## Tecnologias
 
 ![ionic v2](http://ionicframework.com/)

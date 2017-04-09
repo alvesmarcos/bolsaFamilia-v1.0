@@ -9,6 +9,6 @@ import { AuthService } from '../../providers/auth.service';
 
 export class SideMenu {
   @ViewChild(Nav) nav: Nav;
-  
+
   constructor(private _authService: AuthService){ }
 }
