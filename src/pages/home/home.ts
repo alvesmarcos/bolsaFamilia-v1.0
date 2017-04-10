@@ -49,10 +49,7 @@ export class HomePage {
   }
 
   public pushInteratividade(): void {
-    if(this.isValid)
-      this._navCtrl.push(InteratividadePage);
-    else
-      this.presentToast();
+    this._navCtrl.push(InteratividadePage);
   }
 
   public pushSobre(): void {
