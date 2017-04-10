@@ -5,11 +5,24 @@
 </ion-header>
 
 <ion-content>
-  <div id="info" padding>
-    <!-- <img src="assets/icon/atendimento.png" alt="Icone atendimento">
-    <p>Insira seu CEP para localizar a unidade de atendimento CRAS mais próxima</p> -->
-    <!-- <ion-input type="text"></ion-input> -->
-    <!-- <button ion-button color="light">Acessar</button> -->
+  <div id="head-content">
+    <img padding-top src="assets/icon/mensagens.png" alt="Mensagem">
+    <p padding-top>Suas mensagens do Bolsa Família</p>
+    <ion-toolbar color="primary">
+      <ion-row>
+        <ion-col width-45>
+          <div class="box-content">
+            <p>{{'(3)'}} Não Lidas</p>
+          </div>
+        </ion-col>
+        <div class="border-right"></div>
+        <ion-col width-45>
+          <div class="box-content">
+            <p>{{'(20)'}} Lidas</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
   </div>
   <ion-card>
     <ion-card-header color="md_gray_600">Mensagens não lidas</ion-card-header>
