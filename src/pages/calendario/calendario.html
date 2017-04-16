@@ -5,88 +5,50 @@
 </ion-header>
 
 <ion-content>
-  <div id="info" padding>
-    <!-- <img src="assets/icon/calendario.png" alt="Icone calendário"> -->
+  <div id="head-content" padding>
+    <img src="assets/image/cartaonis.png" alt="Icone calendário"> 
     <div *ngIf="_flag">
-      <p>Digite o último número do NIS</p>
-      <ion-item no-lines>
-        <ion-label>NIS</ion-label>
-        <ion-input type="tel" [(ngModel)]="nis"></ion-input>
+      <ion-item>
+        <ion-label>Escolha seu último dígito do NIS</ion-label>
+        <ion-select [(ngModel)]="numeronis">
+          <ion-option value="0">0</ion-option>
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="8">8</ion-option>
+          <ion-option value="9">9</ion-option>
+        </ion-select>
       </ion-item>
-      <div padding>
-        <button ion-button color="secondary" small (click)="getPayDate(nis)">Acessar</button>
-      </div>
     </div>
     <div class="next-pay" *ngIf="!_flag">
       <p>Próximo Pagamento</p>
       <h1>{{'26 de janeiro'}}</h1>
     </div>
   </div>
-  <ion-card>
-    <ion-card-header color="md_gray_600">Próximas datas de pagamento</ion-card-header>
-    <ion-card-content>
-      <ion-list *ngIf="_digit!=-1">
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>JAN</h2>
-          <h2 item-right>{{_date[0]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>FEV</h2>
-          <h2 item-right>{{_date[1]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>MAR</h2>
-          <h2 item-right>{{_date[2]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>ABR</h2>
-          <h2 item-right>{{_date[3]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>MAI</h2>
-          <h2 item-right>{{_date[4]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>JUN</h2>
-          <h2 item-right>{{_date[5]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>JUL</h2>
-          <h2 item-right>{{_date[6]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>AGO</h2>
-          <h2 item-right>{{_date[7]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>SET</h2>
-          <h2 item-right>{{_date[8]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>OUT</h2>
-          <h2 item-right>{{_date[9]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>NOV</h2>
-          <h2 item-right>{{_date[10]}}</h2>
-        </ion-item>
-        <ion-item class="box-date">
-          <ion-icon name="calendar" md="md-calendar" color="primary" item-left></ion-icon>
-          <h2>DEZ</h2>
-          <h2 item-right>{{_date[11]}}</h2>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+
+  <div padding>
+    <ion-item no-padding>
+      <ion-label>Selecione o mês</ion-label>
+      <ion-select [(ngModel)]="meses">
+        <ion-option value="janeiro">Janeiro</ion-option>
+        <ion-option value="fevereiro">Fevereiro</ion-option>
+        <ion-option value="marco">Março</ion-option>
+        <ion-option value="abril">Abril</ion-option>
+        <ion-option value="maio">Maio</ion-option>
+        <ion-option value="junho">Junho</ion-option>
+        <ion-option value="julho">Julho</ion-option>
+        <ion-option value="agosto">Agosto</ion-option>
+        <ion-option value="setembro">Setembro</ion-option>
+        <ion-option value="outubro">Outubro</ion-option>
+        <ion-option value="novembro">Novembro</ion-option>
+        <ion-option value="dezembro">Dezembro</ion-option> 
+      </ion-select>
+    </ion-item>
+    <ion-item no-padding></ion-item>
+    <calendar-component></calendar-component>
+  </div>
 </ion-content>

@@ -10,7 +10,7 @@ export class AuthService {
   }
 
   // OBS: Implementação provisória
-  public validate(nis:string): boolean {
+  validate(nis:string): boolean {
     if(nis=='01234567891'){
       this._nome = 'Marcos Alves da Silva';
       this._nis = nis;
@@ -20,11 +20,11 @@ export class AuthService {
     }
   }
 
-  public get nome(): string {
+  get nome(): string {
     return this._nome;
   }
 
-  public get nis(): string {
+  get nis(): string {
     return this._nis;
   }
 }

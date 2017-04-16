@@ -3,9 +3,11 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 
+import { MenuComponent } from '../components/menu/menu.component';
+import { CalendarComponent } from '../components/calendar/calendar.component';
+
 import { HomePage } from '../pages/home/home';
 import { ModalNis } from '../pages/modal-nis/modal-nis';
-import { SideMenu } from '../pages/menu/menu';
 import { InteratividadePage } from '../pages/interatividade/interatividade';
 import { CalendarioPage } from '../pages/calendario/calendario';
 import { AtendimentoPage } from '../pages/atendimento/atendimento';
@@ -21,7 +23,7 @@ import { CalendarService } from '../providers/calendar.service';
   declarations: [
     MyApp,
     HomePage,
-    SideMenu,
+    MenuComponent,
     ModalNis,
     InteratividadePage,
     CalendarioPage,
@@ -29,7 +31,8 @@ import { CalendarService } from '../providers/calendar.service';
     SobrePage,
     OutrosProgramasPage,
     MensagensPage,
-    ExtratoPage
+    ExtratoPage,
+    CalendarComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -38,7 +41,7 @@ import { CalendarService } from '../providers/calendar.service';
   entryComponents: [
     MyApp,
     HomePage,
-    SideMenu,
+    MenuComponent,
     ModalNis,
     InteratividadePage,
     CalendarioPage,
@@ -46,7 +49,8 @@ import { CalendarService } from '../providers/calendar.service';
     SobrePage,
     OutrosProgramasPage,
     MensagensPage,
-    ExtratoPage
+    ExtratoPage,
+    CalendarComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService, CalendarService]
 })

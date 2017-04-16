@@ -23,7 +23,7 @@ export class HomePage {
   constructor(private _navCtrl: NavController, private _modalCtrl: ModalController,
               private _toastCtrl: ToastController, private _authService: AuthService) { }
 
-  public inputNis(): void {
+  inputNis(): void {
     let modal = this._modalCtrl.create(ModalNis);
     modal.onDidDismiss(data => {
       this._isValid = this._authService.validate(data);
@@ -31,7 +31,7 @@ export class HomePage {
     modal.present();
   }
 
-  public presentToast(): void {
+  presentToast(): void {
     let toast = this._toastCtrl.create({
       message: 'Para acessar essa opção insira seu NIS',
       duration: 3000,
@@ -40,35 +40,35 @@ export class HomePage {
     toast.present();
   }
 
-  public pushAtendimento(): void {
+  pushAtendimento(): void {
     this._navCtrl.push(AtendimentoPage);
   }
 
-  public pushCalendario(value): void {
+  pushCalendario(value): void {
     this._navCtrl.push(CalendarioPage, {digit: value});
   }
 
-  public pushInteratividade(): void {
+  pushInteratividade(): void {
     this._navCtrl.push(InteratividadePage);
   }
 
-  public pushSobre(): void {
+  pushSobre(): void {
     this._navCtrl.push(SobrePage);
   }
 
-  public pushOutrosProgramas(): void {
+  pushOutrosProgramas(): void {
     this._navCtrl.push(OutrosProgramasPage);
   }
 
-  public pushMensagens(): void {
+  pushMensagens(): void {
     this._navCtrl.push(MensagensPage);
   }
 
-  public pushExtrato(): void {
+  pushExtrato(): void {
     this._navCtrl.push(ExtratoPage);
   }
 
-  public get isValid(): boolean {
+  get isValid(): boolean {
     return this._isValid;
   }
 }

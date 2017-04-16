@@ -11,19 +11,19 @@ export class Mensagem {
     this._lida = lida;
   }
 
-  public get titulo(): string {
+  get titulo(): string {
     return this._titulo;
   }
 
-  public get conteudo(): string {
+  get conteudo(): string {
     return this._conteudo;
   }
 
-  public get data(): string {
+  get data(): string {
     return this._data;
   }
 
-  public get lida(): boolean {
+  get lida(): boolean {
     return this._lida;
   }
 }

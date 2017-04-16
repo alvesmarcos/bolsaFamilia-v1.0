@@ -9,7 +9,7 @@ export class CalendarService {
     this.loadPayCalendar();
   }
 
-  public payDate(key:number): string[] {
+  payDate(key:number): string[] {
     return this._hashDate.get(key);
   }
 

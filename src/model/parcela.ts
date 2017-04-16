@@ -9,11 +9,11 @@ export class Parcela {
     this._status = status;
   }
 
-  public get mes(): string {
+  get mes(): string {
     return this._mes;
   }
 
-  public get status(): string {
+  get status(): ParcelaStatus {
     return this._status;
   }
 }

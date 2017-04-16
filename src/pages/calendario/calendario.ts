@@ -25,7 +25,7 @@ export class CalendarioPage {
     }
   }
 
-  public getPayDate(value): void {
+ getPayDate(value): void {
     this._date = this._calendarService.payDate(Number(value));
     this._digit = value;
   }

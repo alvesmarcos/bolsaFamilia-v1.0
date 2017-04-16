@@ -3,11 +3,11 @@ import { Nav } from 'ionic-angular';
 import { AuthService } from '../../providers/auth.service';
 
 @Component({
-  selector: 'side-menu',
-  templateUrl: 'menu.html'
+  selector: 'menu-component',
+  templateUrl: 'menu.component.html'
 })
 
-export class SideMenu {
+export class MenuComponent {
   @ViewChild(Nav) nav: Nav;
 
   constructor(private _authService: AuthService){ }
