@@ -16,7 +16,7 @@ import { OutrosProgramasPage } from '../pages/outros-programas/outros-programas'
 import { MensagensPage } from '../pages/mensagens/mensagens';
 import { ExtratoPage } from '../pages/extrato/extrato';
 
-import { AuthService } from '../providers/auth.service';
+import { UserService } from '../providers/user.service';
 import { CalendarService } from '../providers/calendar.service';
 
 @NgModule({
@@ -52,6 +52,6 @@ import { CalendarService } from '../providers/calendar.service';
     ExtratoPage,
     CalendarComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService, CalendarService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UserService, CalendarService]
 })
 export class AppModule {}

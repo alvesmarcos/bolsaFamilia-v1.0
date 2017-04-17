@@ -1,7 +1,12 @@
 <ion-header id="header" no-border>
   <ion-footer no-border>
-    <ion-label color="md_white_1000" padding-left>{{_authService.nome}}</ion-label>
-    <ion-label color="md_white_1000" padding-left>{{_authService.nis}}</ion-label>
+    <div *ngIf="this._userService.usuario==null">
+      <ion-label color="md_white_1000" padding-left>Menu</ion-label>
+    </div>
+    <div *ngIf="this._userService.usuario!=null">
+      <ion-label color="md_white_1000" padding-left>{{this._userService.usuario.nome}}</ion-label>
+      <ion-label color="md_white_1000" padding-left>{{this._userService.usuario.nis}}</ion-label>
+    </div>
   </ion-footer>
 </ion-header>
 <ion-content>

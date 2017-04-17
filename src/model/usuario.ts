@@ -1,17 +1,17 @@
-import { Parcela } from './parcela';
+import { Extrato } from './extrato';
 import { Mensagem } from './mensagem';
 
 export class Usuario {
   private _nome: string;
   private _nis: string;
   private _mensagem: Mensagem[];
-  private _parcela: Parcela[];
-
-  constructor(nome: string, nis: string, mensagem: Mensagem[], parcela: Parcela[]) {
-    this._nome = nome;
-    this._nis = nis;
-    this._mensagem = mensagem;
-    this._parcela = parcela;
+  private _extrato: Extrato[];
+  
+  constructor() {
+    this._nome = 'nome';
+    this._nis = 'nis';
+    this._mensagem = [];
+    this._extrato = [];
   }
 
   get nome(): string {
@@ -26,15 +26,23 @@ export class Usuario {
     return this._mensagem;
   }
 
-  get parcela(): Parcela[] {
-    return this._parcela;
+  get extrato(): Extrato[] {
+    return this._extrato;
   }
 
-  add1parcela(parcela: Parcela): void {
-    this._parcela.push(parcela);
+  set nome(nome: string) {
+    this._nome = nome;
   }
 
-  add1mensagem(mensagem: Mensagem): void {
+  set nis(nis: string) {
+    this._nis = nis;
+  }
+
+  add1parcela(extrato: Extrato) {
+    this._extrato.push(extrato);
+  }
+
+  add1mensagem(mensagem: Mensagem) {
     this._mensagem.push(mensagem);
   }
 }

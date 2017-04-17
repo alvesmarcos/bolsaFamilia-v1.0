@@ -13,7 +13,7 @@ export class InteratividadePage {
 
   constructor(private _navCtrl: NavController){ }
 
-  qrCodeDecode(): void {
+  qrCodeDecode() {
     BarcodeScanner.scan().then((barcodeData) => {
        this._content = barcodeData.text;
       }, (err) => {

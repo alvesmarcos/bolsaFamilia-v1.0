@@ -10,7 +10,7 @@ import { ViewController } from 'ionic-angular';
 export class ModalNis {
   constructor(private _viewCtrl: ViewController) { }
 
-  dismiss(data): void {
+  dismiss(data) {
    this._viewCtrl.dismiss(data);
   }
 }

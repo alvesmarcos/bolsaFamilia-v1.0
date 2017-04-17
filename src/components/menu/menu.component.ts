@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav } from 'ionic-angular';
-import { AuthService } from '../../providers/auth.service';
+
+import { UserService } from '../../providers/user.service';
 
 @Component({
   selector: 'menu-component',
@@ -10,5 +11,6 @@ import { AuthService } from '../../providers/auth.service';
 export class MenuComponent {
   @ViewChild(Nav) nav: Nav;
 
-  constructor(private _authService: AuthService){ }
+  constructor(private _userService: UserService) { 
+  }
 }

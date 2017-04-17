@@ -11,7 +11,7 @@ import { OutrosProgramasPage } from '../outros-programas/outros-programas';
 import { MensagensPage } from '../mensagens/mensagens';
 import { ExtratoPage } from '../extrato/extrato';
 
-import { AuthService } from '../../providers/auth.service';
+import { UserService } from '../../providers/user.service';
 
 @Component({
   selector: 'page-home',
@@ -21,17 +21,17 @@ export class HomePage {
   private _isValid: boolean = false;
 
   constructor(private _navCtrl: NavController, private _modalCtrl: ModalController,
-              private _toastCtrl: ToastController, private _authService: AuthService) { }
+              private _toastCtrl: ToastController, private _userService: UserService) { }
 
-  inputNis(): void {
+  inputNis() {
     let modal = this._modalCtrl.create(ModalNis);
     modal.onDidDismiss(data => {
-      this._isValid = this._authService.validate(data);
+      this._isValid = this._userService.validate(data);
     });
     modal.present();
   }
 
-  presentToast(): void {
+  presentToast() {
     let toast = this._toastCtrl.create({
       message: 'Para acessar essa opção insira seu NIS',
       duration: 3000,
@@ -40,31 +40,31 @@ export class HomePage {
     toast.present();
   }
 
-  pushAtendimento(): void {
+  pushAtendimento() {
     this._navCtrl.push(AtendimentoPage);
   }
 
-  pushCalendario(value): void {
+  pushCalendario(value) {
     this._navCtrl.push(CalendarioPage, {digit: value});
   }
 
-  pushInteratividade(): void {
+  pushInteratividade() {
     this._navCtrl.push(InteratividadePage);
   }
 
-  pushSobre(): void {
+  pushSobre() {
     this._navCtrl.push(SobrePage);
   }
 
-  pushOutrosProgramas(): void {
+  pushOutrosProgramas() {
     this._navCtrl.push(OutrosProgramasPage);
   }
 
-  pushMensagens(): void {
+  pushMensagens() {
     this._navCtrl.push(MensagensPage);
   }
 
-  pushExtrato(): void {
+  pushExtrato() {
     this._navCtrl.push(ExtratoPage);
   }
 
