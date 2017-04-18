@@ -4,11 +4,11 @@ import { NavController } from 'ionic-angular';
 import { BarcodeScanner } from 'ionic-native';
 
 @Component({
-  selector: 'page-interatividade',
-  templateUrl: 'interatividade.html'
+  selector: 'page-interactive',
+  templateUrl: 'interactive.html'
 })
 
-export class InteratividadePage {
+export class InteractivePage {
   private _content: string;
 
   constructor(private _navCtrl: NavController){ }

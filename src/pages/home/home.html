@@ -13,7 +13,7 @@
 </ion-header>
 
 <ion-content class="background" onscroll="true">
-  <div *ngIf="!isValid" id="default-content" padding (click)="inputNis()">
+  <div *ngIf="!isValid" id="default-content" padding (click)="inputNIS()">
     <img src="assets/image/designmain.png" alt="circle">
     <h5>VEJA MAIS OPÇÕES</h5>
     <p>Toque para inserir seu NIS</p>
@@ -25,7 +25,7 @@
     </div>
     <ion-toolbar color="primary">
       <ion-row>
-        <ion-col width-45 (click)="pushMensagens()">
+        <ion-col width-45 (click)="pushMessages()">
           <div class="box-content">
             <img src="assets/icon/mensagens.png" alt="circle">
             <ion-label>NOVAS MENSAGENS</ion-label>
@@ -33,7 +33,7 @@
           </div>
         </ion-col>
         <div class="border-right"></div>
-        <ion-col width-45 (click)="pushExtrato()">
+        <ion-col width-45 (click)="pushStatement()">
           <div class="box-content">
             <img src="assets/icon/parcelas.png" alt="circle">
             <ion-label>PAGAMENTOS</ion-label>
@@ -47,25 +47,25 @@
     <ion-card-content>
       <ion-grid>
         <ion-row>
-          <ion-col width-33 class="border-bottom-right"  (click)="pushCalendario(-1)">
+          <ion-col width-33 class="border-bottom-right"  (click)="pushCalendar(-1)">
             <img src="assets/icon/calendario.png">
             <p class="text-button">Calendário de Pagamento</p>
           </ion-col>
-          <ion-col width-33 class="border-bottom-right" (click)="pushAtendimento()">
+          <ion-col width-33 class="border-bottom-right" (click)="pushAttendance()">
             <img src="assets/icon/atendimento.png">
             <p class="text-button">Pontos de Atendimento</p>
           </ion-col>
-          <ion-col width-33 class="border-bottom" (click)="pushSobre()">
+          <ion-col width-33 class="border-bottom" (click)="pushAbout()">
             <img src="assets/icon/sobre.png">
             <p class="text-button">Sobre o Bolsa Família</p>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col padding-top width-33 class="border-right" (click)="pushOutrosProgramas()">
+          <ion-col padding-top width-33 class="border-right" (click)="pushOthers()">
             <img src="assets/icon/outrosprogramas.png">
             <p class="text-button">Outros Programas</p>
           </ion-col>
-          <ion-col padding-top width-33 class="border-right" (click)="pushInteratividade()">
+          <ion-col padding-top width-33 class="border-right" (click)="pushInteractive()">
             <img src="assets/icon/qrcode.png">
             <p class="text-button">Canal de Interatividade</p>
           </ion-col>

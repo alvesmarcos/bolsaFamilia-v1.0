@@ -5,10 +5,10 @@ import { NavController, NavParams } from 'ionic-angular';
 import { CalendarService } from '../../providers/calendar.service';
 
 @Component({
-  selector: 'page-calendario',
-  templateUrl: 'calendario.html'
+  selector: 'page-calendar',
+  templateUrl: 'calendar.html'
 })
-export class CalendarioPage {
+export class CalendarPage {
   private _date: string[];
   private _digit: number;
   private _flag: boolean;

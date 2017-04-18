@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-extrato',
-  templateUrl: 'extrato.html'
+  selector: 'page-messages',
+  templateUrl: 'messages.html'
 })
-export class ExtratoPage {
+export class MessagesPage {
   constructor(private _navCtrl: NavController) { }
 }

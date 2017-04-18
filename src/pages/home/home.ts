@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
-
 import { NavController, ModalController, ToastController } from 'ionic-angular';
 
-import { ModalNis }  from '../modal-nis/modal-nis';
-import { InteratividadePage } from '../interatividade/interatividade';
-import { CalendarioPage } from '../calendario/calendario';
-import { AtendimentoPage } from '../atendimento/atendimento';
-import { SobrePage } from '../sobre/sobre';
-import { OutrosProgramasPage } from '../outros-programas/outros-programas';
-import { MensagensPage } from '../mensagens/mensagens';
-import { ExtratoPage } from '../extrato/extrato';
+import { ModalInputNIS } from './modal/nis.modal';
+import { InteractivePage } from '../interactive/interactive';
+import { CalendarPage } from '../calendar/calendar';
+import { AttendancePage } from '../attendance/attendance';
+import { AboutPage } from '../about/about';
+import { OthersPage } from '../others/others';
+import { MessagesPage } from '../messages/messages';
+import { StatementPage } from '../statement/statement';
 
 import { UserService } from '../../providers/user.service';
 
@@ -23,8 +22,8 @@ export class HomePage {
   constructor(private _navCtrl: NavController, private _modalCtrl: ModalController,
               private _toastCtrl: ToastController, private _userService: UserService) { }
 
-  inputNis() {
-    let modal = this._modalCtrl.create(ModalNis);
+  inputNIS() {
+    let modal = this._modalCtrl.create(ModalInputNIS);
     modal.onDidDismiss(data => {
       this._isValid = this._userService.validate(data);
     });
@@ -40,32 +39,32 @@ export class HomePage {
     toast.present();
   }
 
-  pushAtendimento() {
-    this._navCtrl.push(AtendimentoPage);
+  pushAttendance() {
+    this._navCtrl.push(AttendancePage);
   }
 
-  pushCalendario(value) {
-    this._navCtrl.push(CalendarioPage, {digit: value});
+  pushCalendar(value) {
+    this._navCtrl.push(CalendarPage, {digit: value});
   }
 
-  pushInteratividade() {
-    this._navCtrl.push(InteratividadePage);
+  pushInteractive() {
+    this._navCtrl.push(InteractivePage);
   }
 
-  pushSobre() {
-    this._navCtrl.push(SobrePage);
+  pushAbout() {
+    this._navCtrl.push(AboutPage);
   }
 
-  pushOutrosProgramas() {
-    this._navCtrl.push(OutrosProgramasPage);
+  pushOthers() {
+    this._navCtrl.push(OthersPage);
   }
 
-  pushMensagens() {
-    this._navCtrl.push(MensagensPage);
+  pushMessages() {
+    this._navCtrl.push(MessagesPage);
   }
 
-  pushExtrato() {
-    this._navCtrl.push(ExtratoPage);
+  pushStatement() {
+    this._navCtrl.push(StatementPage);
   }
 
   get isValid(): boolean {

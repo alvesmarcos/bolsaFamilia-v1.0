@@ -5,10 +5,10 @@ import { NavController } from 'ionic-angular';
 declare var google;
 
 @Component({
-  selector: 'page-atendimento',
-  templateUrl: 'atendimento.html'
+  selector: 'page-attendance',
+  templateUrl: 'attendance.html'
 })
-export class AtendimentoPage {
+export class AttendancePage {
   @ViewChild('previewmap') mapElement: ElementRef;
   map: any;
 

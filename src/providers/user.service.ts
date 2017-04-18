@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 
-import { Usuario } from '../model/usuario';
+import { User } from '../model/user';
 
 @Injectable()
 export class UserService {
-  private _usuario: Usuario;
+  private _user: User;
   private _existsUser: boolean;
 
   constructor(){ 
-    this._usuario = new Usuario();
+    this._user = new User();
     this._existsUser = false;
   }
 
   // OBS: Implementação provisória
   validate(nis:string): boolean {
     if(nis=='01234567891'){
-      this._usuario.nome = 'Marcos Alves da Silva';
-      this._usuario.nis = nis;
+      this._user.name = 'Marcos Alves da Silva';
+      this._user.nis = nis;
       this._existsUser = true;
     } else {
       this._existsUser = false;
@@ -24,9 +24,9 @@ export class UserService {
     return this._existsUser;
   }
 
-  get usuario(): Usuario {
+  get user(): User {
     if(this._existsUser)
-      return this._usuario;
+      return this._user;
     else
       return null;
   }

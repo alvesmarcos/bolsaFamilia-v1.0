@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-
 import { ViewController } from 'ionic-angular';
 
 @Component({
-  selector: 'modal-nis',
-  templateUrl: 'modal-nis.html'
+  selector: 'nis-modal',
+  templateUrl: 'nis.modal.html'
 })
-
-export class ModalNis {
+export class ModalInputNIS {
   constructor(private _viewCtrl: ViewController) { }
 
   dismiss(data) {
-   this._viewCtrl.dismiss(data);
+    this._viewCtrl.dismiss(data);
   }
 }
