@@ -10,9 +10,15 @@
     <p>Insira seu CEP para localizar a unidade de atendimento CRAS mais próxima</p>
     <ion-item>
       <ion-label>CEP</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="cep"></ion-input>
     </ion-item>
-    <button ion-button color="secondary" small>Procurar</button>
+    <div class="button-align">
+      <button ion-button color="secondary" small (click)="loadMapOn(cep)">Procurar On</button>
+      <button ion-button color="light" small (click)="loadMapOff(cep)">Procurar Off</button>
+    </div>
   </div>
- <div #previewmap id="preview-map"></div>
+  <div #previewmap class="preview-map" *ngIf="flag"></div>
+  <div *ngIf="!flag">
+    <img class="preview-map" [src]="staticMapImage"/>
+  </div>
 </ion-content>

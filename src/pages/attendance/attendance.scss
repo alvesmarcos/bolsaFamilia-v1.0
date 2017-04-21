@@ -17,8 +17,12 @@ page-attendance {
       margin-bottom: 2px;
     }
   }
-  #preview-map {
+  .preview-map {
     height: 100%;
     width: 100%;
+  }
+  button-align {
+    text-align: center;
+    float: right;
   }
 }

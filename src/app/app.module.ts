@@ -1,5 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 
@@ -17,6 +18,7 @@ import { MessagesPage } from '../pages/messages/messages';
 import { StatementPage } from '../pages/statement/statement';
 
 import { UserService } from '../providers/user.service';
+import { MapsService } from '../providers/maps.service';
 import { CalendarService } from '../providers/calendar.service';
 
 @NgModule({
@@ -35,6 +37,7 @@ import { CalendarService } from '../providers/calendar.service';
     CalendarComponent
   ],
   imports: [
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -52,6 +55,6 @@ import { CalendarService } from '../providers/calendar.service';
     StatementPage,
     CalendarComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UserService, CalendarService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UserService, CalendarService, MapsService]
 })
 export class AppModule {}
